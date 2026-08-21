@@ -45,18 +45,7 @@
     return curtop;
     }
   }
-  function handleView(e) {
-    full_view = true;
 
-    console.log(findPos(document.getElementById("speakers"))+1, findPos(document.getElementById("speakers")) );
-
-    window.scroll({
-      left:0,
-      top:findPos(document.getElementById(category))+500, 
-      behavior:'smooth'
-    });
-
-  }
 
   onMount(() => {
     fetch(`https://events.startupmission.in/api/event/mirror/speakers?category=speakers`)
@@ -76,7 +65,7 @@
 </script>
 
 {#each Object.entries(speaker_list) as [category, speakers]}
-  <section class="overflow-hidden { full_view ? "" : "max-h-[850px]"} openTrans relative">
+  <section class="overflow-hidden  openTrans relative">
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 ">
       {#each speakers as { name, designation, organisation, photo, linkedin }}
