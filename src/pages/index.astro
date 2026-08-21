@@ -1,0 +1,854 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Agenda from '../components/Agenda.svelte';
+import Speakers from '../components/Speakers.svelte';
+
+
+
+---
+
+<Layout title="Kerala Innovation Festival | Kerala Startup Mission">
+
+
+<!-- ================= NAV ================= -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-line">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-3 flex items-center justify-between">
+    <a href="#top" class="font-display font-700 text-lg flex items-center gap-2">
+      <img src="/img/logo.svg" class="w-24">
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-body">
+      <a href="#what" class="page-scroll hover:text-blue transition">What is it</a>
+      <a href="#schedule" class="page-scroll hover:text-blue transition">Schedule</a>
+      <a href="#speakers" class="page-scroll hover:text-blue transition">Speakers</a>
+      <a href="#faq" class="page-scroll hover:text-blue transition">FAQ</a>
+    </nav>
+    <a href="https://forms.gle/31UKiGEnz1gnACT89" target="_blank" rel="noopener"
+       class="btn-orange text-sm font-semibold px-5 py-2.5 rounded-full">
+      Register Now →
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO (blue) ================= -->
+<section id="top" class="bg-blue text-white px-6 md:px-10 pt-14 pb-20 overflow-hidden">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-start">
+
+    <div class="reveal">
+      <span class="inline-flex items-center gap-2 bg-white/10 border border-white/25 rounded-full px-4 py-1.5 text-xs font-semibold eyebrow uppercase mb-7">
+        <span class="w-1.5 h-1.5 rounded-full bg-yellow"></span> A KSUM Mentor Bootcamp
+      </span>
+
+      <div class="font-display font-700 leading-[0.95] flex-col ">
+        <p class=" font-extrabold sm:text-5xl md:text-6xl pb-2">Mirror</p>
+        <p class=" md:text-5xl sm:text-4xl">The Mentor With-in.</p>
+      </div>
+
+      <p class="mt-6 text-white/80 text-sm md:text-base font-medium tracking-wide uppercase">
+        2 Days · 10 Speakers · 40 Mentors · Real Stories · Real Cases · Real Practice
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a href="https://forms.gle/31UKiGEnz1gnACT89" target="_blank" rel="noopener"
+           class="btn-orange font-semibold px-7 py-3.5 rounded-full inline-flex items-center gap-2">
+          Register Your Interest →
+        </a>
+        <a href="#schedule" class="btn-ghost-light font-semibold px-6 py-3.5 rounded-full">
+          See the Journey ↓
+        </a>
+      </div>
+
+      <div class="mt-6 flex flex-wrap gap-x-8 gap-y-1 text-sm text-white/85 font-medium items-center  text-start">
+        <span class="font-bold text-lg flex items-center gap-2"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+</svg>
+
+          24–25 September 2026</span>
+        <a href="#contact"  rel="noopener"
+           class="underline decoration-white/40 underline-offset-4 hover:decoration-white transition">
+          <div class="flex gap-2 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+</svg>
+ TIZ Kochi, KSUM
+          </div>
+        </a>
+      </div>
+
+      <div class="mt-12 flex gap-10">
+        <div><p class="font-display font-700 text-3xl">2</p><p class="text-xs text-white/70 uppercase tracking-wide">Days</p></div>
+        <div><p class="font-display font-700 text-3xl">10</p><p class="text-xs text-white/70 uppercase tracking-wide">Speakers</p></div>
+        <div><p class="font-display font-700 text-3xl">40</p><p class="text-xs text-white/70 uppercase tracking-wide">Mentors</p></div>
+      </div>
+    </div>
+
+   
+
+
+<div class="reveal bg-blue-dark rounded-3xl p-6 md:p-7 border border-white/10 shadow-2xl" style="animation-delay:.12s">
+  <p class="text-xs font-semibold uppercase tracking-widest text-white/70 mb-5">🪞 Look into the mirror</p>
+
+  <div class="shard-grid mb-6">
+    <svg viewBox="0 0 400 240" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sh" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#bcd3ff" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <!-- subtle glow behind MIRROR -->
+    <!-- <filter id="mirrorGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter> -->
+  </defs>
+
+  <!-- irregular shard tessellation -->
+  <polygon points="0,0 90,0 60,80 0,60"
+           fill="url(#sh)"
+           class="shard s1"/>
+
+  <polygon points="90,0 180,0 150,70 60,80"
+           fill="url(#sh)"
+           class="shard s2"/>
+
+  <polygon points="180,0 260,0 230,90 150,70"
+           fill="url(#sh)"
+           class="shard s3"/>
+
+  <polygon points="260,0 400,0 400,60 230,90"
+           fill="url(#sh)"
+           class="shard s4"/>
+
+  <polygon points="0,60 60,80 40,160 0,150"
+           fill="url(#sh)"
+           class="shard s5"/>
+
+  <polygon points="60,80 150,70 130,170 40,160"
+           fill="url(#sh)"
+           class="shard s6"/>
+
+  <polygon points="150,70 230,90 210,180 130,170"
+           fill="url(#sh)"
+           class="shard s7"/>
+
+  <polygon points="230,90 400,60 400,170 210,180"
+           fill="url(#sh)"
+           class="shard s8"/>
+
+  <polygon points="0,150 40,160 30,240 0,240"
+           fill="url(#sh)"
+           class="shard s1"/>
+
+  <polygon points="40,160 130,170 110,240 30,240"
+           fill="url(#sh)"
+           class="shard s3"/>
+
+  <polygon points="130,170 210,180 190,240 110,240"
+           fill="url(#sh)"
+           class="shard s5"/>
+
+  <polygon points="210,180 400,170 400,240 190,240"
+           fill="url(#sh)"
+           class="shard s7"/>
+
+  <!-- hairline cracks -->
+  <g
+    stroke="#ffffff"
+    stroke-opacity="0.3"
+    stroke-width="1"
+    fill="none"
+  >
+    <path d="M90,0 L60,80 L40,160 L30,240"/>
+    <path d="M180,0 L150,70 L130,170 L110,240"/>
+    <path d="M260,0 L230,90 L210,180 L190,240"/>
+    <path d="M0,60 L60,80 L150,70 L230,90 L400,60"/>
+    <path d="M0,150 L40,160 L130,170 L210,180 L400,170"/>
+  </g>
+
+  <!-- MIRROR TEXT -->
+  <text
+    x="200"
+    y="128"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    fill="#ffffff"
+    font-size="46"
+    font-weight="800"
+    letter-spacing="10"
+    font-family="Arial, Helvetica, sans-serif"
+    filter="url(#mirrorGlow)"
+    class="mirror-text"
+  >
+    MIRROR
+  </text>
+</svg>
+  </div>
+
+  <div class="border-t border-white/15 pt-5">
+    <p class="text-xs font-semibold uppercase tracking-widest text-white/70 mb-3">Applications close in</p>
+    <div id="countdown" class="flex gap-4">
+      <div><span id="cd-days" class="block font-display font-700 text-2xl">00</span><span class="text-[10px] text-white/60 uppercase">Days</span></div>
+      <div><span id="cd-hours" class="block font-display font-700 text-2xl">00</span><span class="text-[10px] text-white/60 uppercase">Hrs</span></div>
+      <div><span id="cd-mins" class="block font-display font-700 text-2xl">00</span><span class="text-[10px] text-white/60 uppercase">Min</span></div>
+      <div><span id="cd-secs" class="block font-display font-700 text-2xl">00</span><span class="text-[10px] text-white/60 uppercase">Sec</span></div>
+    </div>
+    <p class="text-xs text-white/60 mt-3">17 September 2026 · Open to all KSUM mentors</p>
+  </div>
+</div>
+
+<style>
+
+
+  @keyframes shardGlint{ 0%,100%{ opacity:.25 } 50%{ opacity:.9 } }
+  .shard{ animation:shardGlint 4s ease-in-out infinite; transform-origin:center; }
+  .s1{ animation-delay:0s }
+  .s2{ animation-delay:.6s }
+  .s3{ animation-delay:1.2s }
+  .s4{ animation-delay:1.8s }
+  .s5{ animation-delay:.3s }
+  .s6{ animation-delay:.9s }
+  .s7{ animation-delay:1.5s }
+  .s8{ animation-delay:2.1s }
+  @media (prefers-reduced-motion: reduce){ .shard{ animation:none; opacity:.6; } }
+</style>
+
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="bg-blue-dark border-t border-white/10 py-3 overflow-hidden">
+  <div class="marquee-track text-xs font-semibold uppercase tracking-widest text-white/80">
+    <div class="flex gap-8 pr-8">
+      <span>★ Real Stories</span><span>★ Real Cases</span><span>★ Real Practice</span><span>★ Founder Perspective</span><span>★ Self-Discovery</span><span>★ Peer Learning</span><span>★ Practical Frameworks</span><span>★ KSUM Certified</span>
+    </div>
+    <div class="flex gap-8 pr-8" aria-hidden="true">
+      <span>★ Real Stories</span><span>★ Real Cases</span><span>★ Real Practice</span><span>★ Founder Perspective</span><span>★ Self-Discovery</span><span>★ Peer Learning</span><span>★ Practical Frameworks</span><span>★ KSUM Certified</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= BIG STATEMENT (blue) ================= -->
+<section class="bg-blue text-center px-6 md:px-10 py-24">
+  <div class="max-w-4xl mx-auto reveal">
+    <p class="font-display font-700 text-white leading-tight text-3xl sm:text-4xl md:text-5xl">
+      Look within.
+      <span class="text-yellow">Understand better.</span><br>
+      <span class="text-green">Mentor differently.</span>
+    </p>
+    <p class="mt-6 text-white/75 max-w-xl mx-auto">
+      MIRROR creates a space for mentors to pause, reflect and look at mentorship from different perspectives.
+    </p>
+    <a href="https://forms.gle/31UKiGEnz1gnACT89" target="_blank" rel="noopener"
+       class="btn-orange inline-flex mt-9 font-semibold px-8 py-4 rounded-full">
+      Register Your Interest →
+    </a>
+  </div>
+</section>
+
+<!-- ================= WHAT IS MIRROR ================= -->
+<section id="what" class="px-6 md:px-10 py-24 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <p class="eyebrow uppercase text-xs font-bold text-blue mb-4 reveal">What is MIRROR: The Mentor Within?</p>
+    <div class="grid md:grid-cols-2 gap-10 mb-16">
+      <h2 class="font-display font-700 text-3xl md:text-5xl leading-tight reveal">
+        More than a<br>mentor training<br>programme.
+      </h2>
+      <div class="reveal flex flex-col justify-center gap-4 text-body leading-relaxed" style="animation-delay:.1s">
+        <p>MIRROR: The Mentor Within is a two-day experiential bootcamp designed for KSUM onboarded mentors.</p>
+        <p class="text-ink font-semibold">It is not simply about learning how to mentor.<br>It is about understanding how you mentor.</p>
+        <p>Through self-reflection, real startup situations, peer interaction, founder perspectives and practical startup frameworks, MIRROR gives mentors the space to examine their own mentoring instincts, recognise blind spots, understand the founder's experience and strengthen the way they support startups.</p>
+      </div>
+    </div>
+
+    <p class="eyebrow uppercase text-xs font-bold text-blue mb-4 reveal">Not just sessions. Experiences.</p>
+    <h3 class="font-display font-700 text-2xl md:text-3xl mb-10 reveal">What You'll Experience</h3>
+    <div class="grid sm:grid-cols-2 md:grid-cols-5 gap-5">
+      <div class="border border-line rounded-2xl p-6 hover:shadow-lg transition reveal" style="animation-delay:.05s">
+        <p class="text-2xl mb-3">
+          <img src="/img/2026/coaching_12876136.png" class="w-10">
+        </p>
+        <h4 class="font-display font-600 text-base mb-2">Mentorship Fundamentals</h4>
+        <p class="text-body text-sm leading-relaxed">Understand the role, responsibilities, ethics and boundaries of effective mentorship.</p>
+      </div>
+      <div class="border border-line rounded-2xl p-6 hover:shadow-lg transition reveal" style="animation-delay:.1s">
+        <p class="text-2xl mb-3">
+          
+          <img src="/img/2026/search_1581948.png" class="w-10">
+        </p>
+        <h4 class="font-display font-600 text-base mb-2">Self-Discovery</h4>
+        <p class="text-body text-sm leading-relaxed">Explore your mentoring style, instincts, strengths and blind spots through real mentorship situations.</p>
+      </div>
+
+      <div class="border border-line rounded-2xl p-6 hover:shadow-lg transition reveal" style="animation-delay:.15s">
+        <p class="text-2xl mb-3">
+          <img src="/img/2026/vision_5841976.png" class="w-10">
+        </p>
+        <h4 class="font-display font-600 text-base mb-2">Founder Perspective</h4>
+        <p class="text-body text-sm leading-relaxed">Understand what founders experience when receiving mentorship — including why good advice may sometimes be resisted.</p>
+      </div>
+      <div class="border border-line rounded-2xl p-6 hover:shadow-lg transition reveal" style="animation-delay:.2s">
+        <p class="text-2xl mb-3">
+          <img src="/img/2026/peer-peer_18843021.png" class="w-10">
+        </p>
+        <h4 class="font-display font-600 text-base mb-2">Peer Learning</h4>
+        <p class="text-body text-sm leading-relaxed">Work with mentors across domains to exchange perspectives and solve startup challenges together.</p>
+      </div>
+      <div class="border border-line rounded-2xl p-6 hover:shadow-lg transition reveal" style="animation-delay:.25s">
+        <p class="text-2xl mb-3">
+          <img src="/img/2026/feedback_4802311.png" class="w-10">
+        </p>
+        <h4 class="font-display font-600 text-base mb-2">Practical Frameworks</h4>
+        <p class="text-body text-sm leading-relaxed">Strengthen your perspective on go-to-market, scaling and funding conversations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY MIRROR ================= -->
+<section class="px-6 md:px-10 py-24 bg-soft">
+  <div class="max-w-3xl mx-auto text-center reveal">
+    <p class="eyebrow uppercase text-xs font-bold text-blue mb-6">Why MIRROR: The Mentor Within?</p>
+    <p class="text-body text-lg leading-relaxed mb-4">Every mentor brings experience, expertise and instinct. But effective mentorship requires more than expertise.</p>
+    <p class="font-display font-600 text-2xl leading-snug mb-4">
+      It requires the ability to listen before advising, understand before judging, recognise boundaries, challenge assumptions and adapt to the founder in front of you.
+    </p>
+    <p class="text-body text-lg leading-relaxed">MIRROR creates a space for mentors to pause, reflect and look at mentorship from different perspectives.</p>
+  </div>
+</section>
+
+<!-- ================= TWO-DAY JOURNEY (blue) ================= -->
+<section id="schedule" class="bg-[#0d3fb0] px-6 md:px-10 py-24">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-14">
+      <p class="eyebrow uppercase text-xs font-bold text-[#FFD34D] mb-4">The Interactive Programme</p>
+      <h2 class="font-display font-700 text-white text-3xl md:text-4xl mb-3">The Two-Day Journey</h2>
+    </div>
+
+    <Agenda client:load></Agenda>
+  </div>
+</section>
+
+
+
+<!-- ================= SPEAKERS ================= -->
+<section id="speakers" class="px-6 md:px-10 pt-24 bg-soft">
+  <div class="max-w-6xl mx-auto">
+    <p class="eyebrow uppercase text-xs font-bold text-blue mb-4 reveal">Meet the People Behind MIRROR</p>
+    <h2 class="font-display font-700 text-3xl md:text-4xl mb-14 reveal">Speakers</h2>
+      <Speakers client:load></Speakers>
+  </div>
+</section>
+
+
+
+
+<!-- ================= FAQ ================= -->
+<section id="faq" class="px-6 md:px-10 py-24 bg-[#f8fafc]">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="font-display font-bold text-3xl md:text-4xl text-black reveal">
+        FAQ
+      </h2>
+    </div>
+
+    <!-- FAQ Columns -->
+    <div id="faq-wrapper" class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 items-start">
+
+      <!-- LEFT COLUMN -->
+      <div class="space-y-4">
+
+        <!-- FAQ 1 -->
+        <details
+          class="faq-item group bg-white border-2 border-black rounded-2xl overflow-hidden"
+        >
+          <summary
+            class="flex items-center justify-between gap-5 px-6 py-5 cursor-pointer list-none select-none"
+          >
+            <span class="font-display font-semibold text-base md:text-lg text-black">
+              Do I need to attend both days?
+            </span>
+
+            <svg
+              class="faq-icon w-5 h-5 shrink-0 transition-transform duration-300 group-open:rotate-180"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </summary>
+
+          <div class="px-6 pb-6">
+            <p class="text-body text-sm md:text-base leading-relaxed text-gray-600">
+              Yes. MIRROR is designed as one connected journey. Day One builds
+              the foundation; Day Two expands the perspective through the
+              founder's lens and practical startup themes.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details
+          class="faq-item group bg-white border-2 border-black rounded-2xl overflow-hidden"
+        >
+          <summary
+            class="flex items-center justify-between gap-5 px-6 py-5 cursor-pointer list-none select-none"
+          >
+            <span class="font-display font-semibold text-base md:text-lg text-black">
+              What should I bring?
+            </span>
+
+            <svg
+              class="faq-icon w-5 h-5 shrink-0 transition-transform duration-300 group-open:rotate-180"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </summary>
+
+          <div class="px-6 pb-6">
+            <p class="text-body text-sm md:text-base leading-relaxed text-gray-600">
+              Just yourself and an open mind. The programme is designed around
+              participation, interaction and practical learning.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details
+          class="faq-item group bg-white border-2 border-black rounded-2xl overflow-hidden"
+        >
+          <summary
+            class="flex items-center justify-between gap-5 px-6 py-5 cursor-pointer list-none select-none"
+          >
+            <span class="font-display font-semibold text-base md:text-lg text-black">
+              Is this a lecture-based programme?
+            </span>
+
+            <svg
+              class="faq-icon w-5 h-5 shrink-0 transition-transform duration-300 group-open:rotate-180"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </summary>
+
+          <div class="px-6 pb-6">
+            <p class="text-body text-sm md:text-base leading-relaxed text-gray-600">
+              No. MIRROR combines presentations, workshops, self-discovery,
+              founder stories, peer interaction, case-based learning, startup
+              problem-solving and role-play.
+            </p>
+          </div>
+        </details>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="space-y-4">
+
+        <!-- FAQ 4 -->
+        <details
+          class="faq-item group bg-white border-2 border-black rounded-2xl overflow-hidden"
+        >
+          <summary
+            class="flex items-center justify-between gap-5 px-6 py-5 cursor-pointer list-none select-none"
+          >
+            <span class="font-display font-semibold text-base md:text-lg text-black">
+              Will I get to interact with other mentors?
+            </span>
+
+            <svg
+              class="faq-icon w-5 h-5 shrink-0 transition-transform duration-300 group-open:rotate-180"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </summary>
+
+          <div class="px-6 pb-6">
+            <p class="text-body text-sm md:text-base leading-relaxed text-gray-600">
+              Yes. Mentor Connect is specifically designed for peer learning,
+              networking and knowledge exchange.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details
+          class="faq-item group bg-white border-2 border-black rounded-2xl overflow-hidden"
+        >
+          <summary
+            class="flex items-center justify-between gap-5 px-6 py-5 cursor-pointer list-none select-none"
+          >
+            <span class="font-display font-semibold text-base md:text-lg text-black">
+              Will there be practical activities?
+            </span>
+
+            <svg
+              class="faq-icon w-5 h-5 shrink-0 transition-transform duration-300 group-open:rotate-180"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </summary>
+
+          <div class="px-6 pb-6">
+            <p class="text-body text-sm md:text-base leading-relaxed text-gray-600">
+              Yes. Participants will examine mentorship dilemmas, work through
+              startup challenges, collaborate in cross-functional teams and
+              practise mentor-founder conversations.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details
+          class="faq-item group bg-white border-2 border-black rounded-2xl overflow-hidden"
+        >
+          <summary
+            class="flex items-center justify-between gap-5 px-6 py-5 cursor-pointer list-none select-none"
+          >
+            <span class="font-display font-semibold text-base md:text-lg text-black">
+              Will I receive a certificate?
+            </span>
+
+            <svg
+              class="faq-icon w-5 h-5 shrink-0 transition-transform duration-300 group-open:rotate-180"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </summary>
+
+          <div class="px-6 pb-6">
+            <p class="text-body text-sm md:text-base leading-relaxed text-gray-600">
+              Yes. The programme is designed to train and certify the 40 newly
+              onboarded mentors.
+            </p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- CTA -->
+<section id="apply" class="relative overflow-hidden bg-white py-24 text-center max-[640px]:py-16">
+
+  <!-- soft ambient color blobs -->
+  <div class="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[#4d80ff40] blur-3xl"></div>
+  <div class="pointer-events-none absolute right-1/3 top-8 h-40 w-40 rounded-full bg-[#155DFC]/10 blur-2xl"></div>
+
+  <div class="relative mx-auto max-w-[720px] px-8 max-[640px]:px-5">
+
+    <span class="mb-7 inline-flex items-center gap-2 rounded-full border border-[#E6E9F2] bg-[#F6F8FC] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-[#155DFC]">
+      <span class="h-1.5 w-1.5 rounded-full bg-[#4d88ff]"></span> Ready to look within?
+    </span>
+
+    <h2 class="text-[44px] font-bold leading-[1.16] tracking-[-.02em] text-[#0B0F1A] max-[640px]:text-[32px]">
+      Unlock the true <span class="text-[#FF7A29]">mentor within</span>.
+    </h2>
+
+    <p class="mx-auto mb-10 mt-6 max-w-[460px] font-['IBM_Plex_Mono'] text-[13.5px] text-[#4B5468]">
+      MIRROR : The Mentor Within — A KSUM Mentor Bootcamp
+    </p>
+
+    <a href="https://zfrmz.com/Ky6rMRxMyn9CTNbETqkD" target="_blank"
+       class="inline-flex items-center gap-2 rounded-[10px] bg-[#2966ff] px-[26px] py-3.5 text-[14.5px] font-semibold text-white shadow-[0_10px_24px_rgba(255,122,41,0.35)] transition duration-150 hover:-translate-y-0.5 hover:bg-[#E4551F] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF7A29]">
+      Register Your Interest →
+    </a>
+
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-[12.5px] text-[#4B5468]">
+      <span class="inline-flex items-center gap-1.5">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+        24–25 September 2026
+      </span>
+      <span class="hidden h-1 w-1 rounded-full bg-[#c7cfe6] sm:inline-block"></span>
+      <a href="#contact" target="_blank"
+         class="inline-flex items-center gap-1.5 underline decoration-[#c7cfe6] underline-offset-4 transition hover:text-[#155DFC] hover:decoration-[#155DFC]">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        TIZ Kochi, KSUM
+      </a>
+      <span class="hidden h-1 w-1 rounded-full bg-[#c7cfe6] sm:inline-block"></span>
+      <span class="inline-flex items-center gap-1.5 font-semibold text-[#0B0F1A]">
+        <span class="h-1.5 w-1.5 rounded-full bg-[#296dff]"></span> Applications close: 17 September 2026
+      </span>
+    </div>
+
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-widest text-[#4B5468]">
+      <span class="rounded-full border border-[#E6E9F2] px-3 py-1.5">2 Days</span>
+      <span class="rounded-full border border-[#E6E9F2] px-3 py-1.5">10 Speakers</span>
+      <span class="rounded-full border border-[#E6E9F2] px-3 py-1.5">40 Mentors</span>
+      <span class="rounded-full border border-[#E6E9F2] px-3 py-1.5">KSUM Certified</span>
+    </div>
+
+  </div>
+</section>
+  </main>
+
+
+  <section id="contact" class="relative text-[#10b948]">
+		<div class="px-5 lg:px-20 mx-auto">
+			<div class="flex flex-col md:flex-row items-center justify-center">
+				<div class="md:w-1/2 w-full">
+					<iframe title="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15714.13294256542!2d76.3542335!3d10.0553212!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeaddd199d9bbde2b!2sKerala%20Technology%20Innovation%20Zone%20(KTIZ)!5e0!3m2!1sen!2sin!4v1648204144344!5m2!1sen!2sin" width="100%" height="300" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<div class="md:w-1/2 w-full">
+					<div class="p-10 text-center text-black font-display flex flex-col items-center justify-center">
+						<img src="/img/logo.svg" class="h-32 mb-3" alt="Logo" />
+						<div class="mb-5">
+							<div class="font-bold md:text-2xl ">Kerala Technology Innovation Zone</div>
+							<div class="">Kalamassery, Kochi</div>
+						</div>
+						<div class="mb-5">
+							<div class="text-sm mb-3">
+								<!-- For More Details &amp; <br />Partnership Opportunities Contact: -->
+								Contact:
+							</div>
+							<div class="font-bold">Anjana B S</div>
+							<div class="">ksum-mind@startupmission.in </div>
+						</div>
+
+						<div class=" flex flex-row gap-3 item-center jstify-center">
+							<span>Follow us:</span>
+							<a href="https://www.instagram.com/keralastartupmission/" target="_blank" class="hover:text-kif-dark-blue">
+								<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+							</a>
+							<a href="https://www.linkedin.com/company/kerala-startup-mission/" target="_blank" class="hover:text-kif-dark-blue">
+								<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg>
+							</a>
+							
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="w-full mt-10 border-t-2 border-gray-200">
+		<div class="text-sm px-5 py-3 text-center">
+			Copyright © 2026 | <a href="https://startupmission.kerala.gov.in/" target="_blank" class="hover:text-blue-500">Kerala Startup Mission</a>
+		</div>
+	</section>
+
+
+<footer class="bg-blue-dark px-6 md:px-10 py-10 hidden">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-3 items-center text-white/70 text-sm">
+    <div>
+      <p class="font-display font-600 text-white">MIRROR — A KSUM Mentor Bootcamp</p>
+      <p>TIZ Kochi · Kerala Startup Mission</p>
+    </div>
+    <div class="text-left md:text-right">
+      <p>Programme Coordinator: Anjana B S</p>
+      <p>ksum-mind@startupmission.in</p>
+    </div>
+  </div>
+</footer>
+
+</Layout>
+<script is:inline>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.animationPlayState='running'; io.unobserve(e.target);} });
+  }, {threshold:.15});
+  els.forEach(el=>{ el.style.animationPlayState='paused'; io.observe(el); });
+
+  const target = new Date("2026-09-17T23:59:59+05:30").getTime();
+  function tick(){
+    const now = Date.now();
+    let diff = target - now; if(diff < 0) diff = 0;
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    const pad = n => String(n).padStart(2,'0');
+    document.getElementById('cd-days').textContent = pad(d);
+    document.getElementById('cd-hours').textContent = pad(h);
+    document.getElementById('cd-mins').textContent = pad(m);
+    document.getElementById('cd-secs').textContent = pad(s);
+  }
+  tick(); setInterval(tick, 1000);
+</script>
+<style is:global>
+  :root{
+    --blue:#155dfc;
+    --blue-dark:#0d3fb0;
+    --blue-tint:#eaf1ff;
+    --orange:#ff6a3d;
+    --orange-dark:#e4551f;
+    --yellow:#ffd34d;
+    --green:#22c55e;
+    --ink:#0b0f1a;
+    --body:#4b5468;
+    --line:#e6e9f2;
+    --bg:#ffffff;
+    --bg-soft:#f6f8fc;
+  }
+  *{ scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; }
+  .font-display{ font-family:'Space Grotesk', sans-serif; }
+  .text-body{ color:var(--body); }
+  .text-blue{ color:var(--blue); }
+  .text-orange{ color:var(--orange); }
+  .text-green{ color:var(--green); }
+  .bg-blue{ background:var(--blue); }
+  .bg-blue-dark{ background:var(--blue-dark); }
+  .bg-blue-tint{ background:var(--blue-tint); }
+  .bg-soft{ background:var(--bg-soft); }
+  .border-line{ border-color:var(--line); }
+
+  .btn-orange{ background:var(--orange); color:#fff; transition:.2s; }
+  .btn-orange:hover{ background:var(--orange-dark); }
+  .btn-ghost-light{ background:rgba(255,255,255,0.12); color:#fff; border:1px solid rgba(255,255,255,0.35); transition:.2s; }
+  .btn-ghost-light:hover{ background:rgba(255,255,255,0.2); }
+  .btn-ghost-dark{ border:1.5px solid var(--ink); color:var(--ink); transition:.2s; }
+  .btn-ghost-dark:hover{ background:var(--ink); color:#fff; }
+
+  .eyebrow{ letter-spacing:.14em; }
+
+  @keyframes rise{ from{ opacity:0; transform:translateY(18px);} to{ opacity:1; transform:translateY(0);} }
+  .reveal{ opacity:0; animation:rise .7s ease forwards; }
+
+  details > summary{ list-style:none; cursor:pointer; }
+  details > summary::-webkit-details-marker{ display:none; }
+  .chevron{ transition:transform .3s ease; }
+  details[open] .chevron{ transform:rotate(135deg); }
+  .day-panel{ transition:grid-template-rows .4s ease; display:grid; grid-template-rows:0fr; }
+  details[open] .day-panel{ grid-template-rows:1fr; }
+  .day-panel > div{ overflow:hidden; }
+
+  .marquee-track{ display:flex; width:max-content; animation:scroll 26s linear infinite; }
+  @keyframes scroll{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
+
+  /* hero reflection illustration */
+  @keyframes shimmer{ 0%,100%{ opacity:.5 } 50%{ opacity:1 } }
+  .glint{ animation:shimmer 3.6s ease-in-out infinite; }
+  .glint-slow{ animation:shimmer 5s ease-in-out infinite; }
+
+
+
+  ::-webkit-scrollbar{ width:10px; }
+  ::-webkit-scrollbar-track{ background:var(--bg-soft); }
+  ::-webkit-scrollbar-thumb{ background:#c7cfe6; border-radius:6px; }
+  @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
+</style>
+
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll("#faq-wrapper .faq-item");
+
+    faqItems.forEach((item) => {
+      item.addEventListener("toggle", function () {
+        if (!item.open) return;
+
+        faqItems.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.removeAttribute("open");
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style is:global>
+  /* Remove default details arrow */
+  #faq-wrapper summary::-webkit-details-marker {
+    display: none;
+  }
+
+  #faq-wrapper summary::marker {
+    display: none;
+    content: "";
+  }
+</style>
+
+<script is:inline>
+  document.querySelectorAll("a.page-scroll").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const href = anchor.getAttribute("href");
+      const targetId = href.replace(/^\/?#/, "");
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        e.preventDefault();
+
+        targetElement.scrollIntoView({ behavior: "smooth" });
+
+        history.replaceState(null, null, window.location.pathname);
+      }
+    });
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const targetId = hash.replace("#", "");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        setTimeout(() => {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+          history.replaceState(null, null, window.location.pathname);
+        }, 100);
+      }
+    }
+  });
+</script>
